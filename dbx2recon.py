@@ -89,7 +89,7 @@ from http.cookiejar import CookieJar
 __VERSION__ = "3.0.0"
 
 
-CLASS _KeepPost(urllib.request.HTTPRedirectHandler):
+class _KeepPost(urllib.request.HTTPRedirectHandler):
   """Follow redirects but PRESERVE the POST method and body. urllib's default handler
     downgrades a redirected POST to a bodyless GET (301/302/303), which would silently
     drop the batch payload when a site redirects http->https or to a canonical host and
